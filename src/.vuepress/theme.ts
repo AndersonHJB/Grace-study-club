@@ -32,6 +32,7 @@ export default hopeTheme({
   // 博客相关
   blog: {
     description: "一个饺子的历程",
+    avatar: "/Dumpling.png",
     intro: "/intro.html",
     medias: {
       // Baidu: "https://example.com",
