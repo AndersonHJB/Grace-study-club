@@ -2,7 +2,7 @@
 home: true
 layout: BlogHome
 icon: home
-title: 博客主页
+title: 饺子研习社
 heroImage: /Dumpling.png
 bgImage: https://blog.bornforthis.cn/img/saysay/%E6%B1%BD%E8%BD%A6.png
 heroText: 饺子研习社
