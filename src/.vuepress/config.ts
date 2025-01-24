@@ -6,8 +6,8 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "饺子研习社",
-  description: "饺子的学习之路～",
+  title: "婉棠研习社",
+  description: "婉棠的学习之路～",
 
   theme,
 

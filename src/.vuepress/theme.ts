@@ -4,18 +4,18 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://dumpling.bornforthis.cn/",
+  hostname: "https://grace.bornforthis.cn/",
 
   author: {
     name: "AI悦创",
-    url: "https://dumpling.bornforthis.cn/",
+    url: "https://grace.bornforthis.cn/",
   },
 
   iconAssets: "fontawesome-with-brands",
 
   logo: "/Dumpling.png",
 
-  repo: "AndersonHJB/Dumpling-study-club",
+  repo: "AndersonHJB/Grace-study-club",
 
   docsDir: "src",
 
