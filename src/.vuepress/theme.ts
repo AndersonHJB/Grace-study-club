@@ -11,8 +11,6 @@ export default hopeTheme({
     url: "https://grace.bornforthis.cn/",
   },
 
-  iconAssets: "fontawesome-with-brands",
-
   logo: "/Dumpling.png",
 
   repo: "AndersonHJB/Grace-study-club",
@@ -26,12 +24,12 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "饺子研习社",
+  footer: "婉棠记",
   displayFooter: true,
 
   // 博客相关
   blog: {
-    description: "一个饺子的历程",
+    description: "婉棠记",
     avatar: "/Dumpling.png",
     intro: "/intro.html",
     medias: {
@@ -72,6 +70,73 @@ export default hopeTheme({
       // },
     },
   },
+  markdown: {
+    // 启用 figure
+    figure: true,
+    // 启用图片懒加载
+    imgLazyload: true,
+    // 启用图片标记
+    imgMark: true,
+    // 启用图片大小
+    imgSize: true,
+    mark: true,
+    codeTabs: true,
+    tabs: true,
+    math: true,
+    hint: true,
+    alert: true,
+    chartjs: false,
+    echarts: false,
+    mermaid: true,
+    vuePlayground: false,
+    sub: true,
+    spoiler: true,
+    sup: true,
+    demo: true,
+    tasklist: true,
+    include: true,
+    attrs: false,
+    footnote: true,
+    align: true,
+    flowchart: false,
+    gfm: true,
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({ tag }) => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+        },
+      },
+    ],
+    highlighter: {
+      type: "shiki",
+      collapsedLines: 15,
+      //   lineNumbers: 1,
+      notationDiff: true,
+      notationFocus: true,
+      highlightLines: true,
+      notationHighlight: true,
+      //   langs: ['sql', 'python', 'java', 'javascript', 'c', 'c#', 'c++', 'html', 'css',
+      //     'bash', 'rust', 'php', 'r', 'cmd', 'yaml', 'markdown', 'http', 'cmake', 'matlab',
+      //     'plsql', 'ini', "fortran-free-form", "fortran-fixed-form", 'go', 'vue', 'tex', 'text', 'csv', 'fish',
+      //     'makefile', 'typescript',
+      //   ],
+      // langAlias: {
+      //   ["fortran"]: "fortran-free-form",
+      // },
+      theme: "monokai",
+      // themes: {
+      //   light: "monokai",
+      //   dark: "one-dark-pro",
+      // },
+    },
+    vPre: true,
+  },
 
   // 加密配置
   encrypt: {
@@ -100,137 +165,34 @@ export default hopeTheme({
     // },
 
     components: {
-      components: ["Badge", "VPCard"],
-    },
+      componentOptions: {
 
-    // 此处开启了很多功能用于演示，你应仅保留用到的功能。
-    markdownImage: {
-      figure: true,
-      lazyload: true,
-      size: true,
+        share: {
+
+          // services: ["email", "qq", "weibo", "qrcode"],
+          services: ["email", "qq", "qrcode"],
+        }
+      },
+      components: [
+        "VPBanner",
+        "VPCard",
+        "BiliBili",
+        "PDF",
+        "SiteInfo",
+        "StackBlitz",
+        "Share",
+        "VidStack",
+      ],
+      rootComponents: {
+
+      }
     },
 
     // markdownMath: {
     //   // 启用前安装 katex
     //   type: "katex",
     //   // 或者安装 mathjax-full
-    //   type: "mathjax",
-    // },
-
-    // 此功能被开启用于演示，你应仅当使用时保留。
-    markdownTab: true,
-
-    // 此处开启了很多功能用于演示，你应仅保留用到的功能。
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      component: true,
-      demo: true,
-      include: true,
-      mark: true,
-      plantuml: true,
-      spoiler: true,
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tasklist: true,
-      vPre: true,
-
-      // 在启用之前安装 chart.js
-      // chart: true,
-
-      // insert component easily
-
-      // 在启用之前安装 echarts
-      // echarts: true,
-
-      // 在启用之前安装 flowchart.ts
-      // flowchart: true,
-
-      // gfm requires mathjax-full to provide tex support
-      // gfm: true,
-
-      // 在启用之前安装 mermaid
-      // mermaid: true,
-
-      // playground: {
-      //   presets: ["ts", "vue"],
-      // },
-
-      // 在启用之前安装 @vue/repl
-      // vuePlayground: true,
-
-      // install sandpack-vue3 before enabling it
-      // sandpack: true,
-    },
-
-    // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
-    // pwa: {
-    //   favicon: "/favicon.ico",
-    //   cacheHTML: true,
-    //   cacheImage: true,
-    //   appendBase: true,
-    //   apple: {
-    //     icon: "/assets/icon/apple-icon-152.png",
-    //     statusBarColor: "black",
-    //   },
-    //   msTile: {
-    //     image: "/assets/icon/ms-icon-144.png",
-    //     color: "#ffffff",
-    //   },
-    //   manifest: {
-    //     icons: [
-    //       {
-    //         src: "/assets/icon/chrome-mask-512.png",
-    //         sizes: "512x512",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-mask-192.png",
-    //         sizes: "192x192",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-512.png",
-    //         sizes: "512x512",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-192.png",
-    //         sizes: "192x192",
-    //         type: "image/png",
-    //       },
-    //     ],
-    //     shortcuts: [
-    //       {
-    //         name: "Demo",
-    //         short_name: "Demo",
-    //         url: "/demo/",
-    //         icons: [
-    //           {
-    //             src: "/assets/icon/guide-maskable.png",
-    //             sizes: "192x192",
-    //             purpose: "maskable",
-    //             type: "image/png",
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
+    //   // type: "mathjax",
     // },
 
     // 如果你需要幻灯片，安装 @vuepress/plugin-revealjs 并取消下方注释
