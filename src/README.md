@@ -5,7 +5,7 @@ icon: home
 title: 婉棠记
 heroImage: /Dumpling.png
 bgImage: https://blog.bornforthis.cn/img/saysay/%E6%B1%BD%E8%BD%A6.png
-heroText: 饺子研习社
+heroText: 婉棠记
 heroFullScreen: true
 tagline: 研究、学习、生活
 # projects:
